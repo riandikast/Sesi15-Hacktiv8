@@ -43,10 +43,14 @@ export default function App() {
 
         <View>
           <Text style={styles.name}>
-            {`${item.name.first} ${item.name.last}`}
+            {`${item.name.title} ${item.name.first} ${item.name.last}`}
           </Text>
 
           <Text style={styles.userText}>{item.email}</Text>
+          <Text
+            style={
+              styles.userText
+            }>{`${item.location.street.number} ${item.location.street.name} ${item.location.city}`}</Text>
         </View>
       </View>
     </View>
@@ -113,6 +117,7 @@ const styles = StyleSheet.create({
   },
 
   userText: {
+    fontSize: 13,
     textAlign: 'center',
   },
 
